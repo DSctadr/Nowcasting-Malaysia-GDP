@@ -1,10 +1,19 @@
 # Nowcasting Malaysia’s GDP with Machine Learning
 
-### Project objectives: 
-* To identify new and potential approach that is nowcasting using machine learning models.
-* To complement and/or or replace the existing method in producing advanced estimates for GDP.
+### Introduction
+This report presents the International Data Science Accelerator Programme's output for Nowcasting Malaysia's Gross Domestic Product (GDP) using Machine Learning. This mentor-mentee programme was held over the 12 weeks (April 11 to July 1 2022) between mentees, Veronica Jamilat, Khadijah Jasni, Fatin Ezzati (statisticians from the Department of Statistics Malaysia) and Will Malpass (Data Scientist, Data Science Campus UK) as a mentor.
 
+This project aims to identify a new and potential approach to nowcasting GDP using Machine Learning models. This new approach may complement the existing method of producing GDP advanced estimates. The project output is reproducible and accessible through GitHub.
+
+### Data and Experimental Setup
+The most crucial part of executing this project is acquiring relevant data series. Initially, we managed to compile a dataset comprising more than 100 economic-related variables at different time-frame. Some variables have more extended back series, while some indicators are only available in shorter time series, making the variable selection process consume much more time than expected. The process includes cross-checking available time-series data on different platforms and harmonising those datasets.
+
+### Experimental Procedure
 ![Data Science drawio](https://user-images.githubusercontent.com/58675575/175885248-d361e44d-72b3-40f6-9f15-90f4b02e9d8b.png)
+
+
+### Data
+Before implementing Machine Learning Models, we have experimented with various combinations of a dataset. Those datasets are selected with variables that have extended back series and transformed into a stationary dataset. 
 
 | Variable | Description |
 | ------------- | ------------- |
