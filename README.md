@@ -4,7 +4,7 @@
 * To identify new and potential approach that is nowcasting using machine learning models.
 * To complement and/or or replace the existing method in producing advanced estimates for GDP.
 
-![Screenshot][Data Science.drawio.png]
+![Data Science drawio](https://user-images.githubusercontent.com/58675575/175885248-d361e44d-72b3-40f6-9f15-90f4b02e9d8b.png)
 
 | Variable | Description |
 | ------------- | ------------- |
