@@ -4,7 +4,7 @@
 * To identify new and potential approach that is nowcasting using machine learning models.
 * To complement and/or or replace the existing method in producing advanced estimates for GDP.
 
-![alt text]([http://url/to/img.png](https://github.com/kathyskj/ML-NOWCASTING-MALAYSIA-GDP/blob/main/Data%20Science.drawio.png))
+![alt text]([https://github.com/kathyskj/ML-NOWCASTING-MALAYSIA-GDP/blob/main/Data Science.drawio.png])
 
 | Variable | Description |
 | ------------- | ------------- |
