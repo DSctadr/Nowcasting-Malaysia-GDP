@@ -10,7 +10,7 @@ This project aims to identify a new and potential approach to nowcasting GDP usi
 
 ### Data and Experimental Setup
 The most crucial part of executing this project is acquiring relevant data series. Initially, we managed to compile a dataset comprising more than 100 economic-related variables at different time-frame. Some variables have more extended back series, while some indicators are only available in shorter time series, making the variable selection process consume much more time than expected. The process includes cross-checking available time-series data on different platforms and harmonising those datasets.
-Fatin ezzati love choco
+
 ### Experimental Procedure
 ![Data Science drawio](https://user-images.githubusercontent.com/58675575/175885248-d361e44d-72b3-40f6-9f15-90f4b02e9d8b.png)
 
