@@ -51,8 +51,8 @@ Before implementing Machine Learning Models, we have experimented with various d
 |IPIMFG|	IPI: Manufacturing| Index |
 |IPIMIN|	IPI: Mining| Index |
 |IPITOT|	IPI: Total| Index |
-|LGC|	Lagging Index (LG) Composite Index| YoY (%) |
-|LIC|	Leading Index (LI) Composite Index| YoY (%) |
+|LGC|	Lagging Index (LG)| YoY (%) |
+|LIC|	Leading Index (LI)| YoY (%) |
 |OBOCC|	Outstanding Balance of Credit Cards| YoY (%) |
 |PALMOIL|	Palm Oil| YoY (%) |
 |RUBBER|	Rubber (SMR 20)| YoY (%) |
@@ -66,9 +66,7 @@ Before implementing Machine Learning Models, we have experimented with various d
 Processed data used in the modelling process includes 42 selected variables and transformed into a stationary dataset. There are three (3) datasets involved in the experiment. Dataset split into:
 
 •	Full data (Q12005 - Q42021)
-
 •	During COVID19, exclude  vaccination rollout (Q12020-Q12021)
-
 •	During COVID19, include  vaccination rollout (Q12021-Q42021)
 
 *Experimenting with different time-frame to see how those models perform with extreme signal(s) - side note: it is worth experimenting with those time frames because NY Fed shut down their nowcast over the pandemic!*
