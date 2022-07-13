@@ -126,7 +126,7 @@ Processed data used in the modelling process includes 42 selected variables and 
 •	During COVID19, exclude  vaccination rollout (Q12020-Q12021)
 •	During COVID19, include  vaccination rollout (Q12021-Q42021)
 
-** Experimenting with different time-frame to see how those models perform with extreme signal(s) - side note: it is worth experimenting with those time frames because NY Fed shut down their nowcast over the pandemic! **
+*Experimenting with different time-frame to see how those models perform with extreme signal(s) - side note: it is worth experimenting with those time frames because NY Fed shut down their nowcast over the pandemic!*
 
 ![image](https://user-images.githubusercontent.com/104331591/178622693-dd57d50c-43b9-46e8-a72d-7c3ba85ed5db.png)
 
