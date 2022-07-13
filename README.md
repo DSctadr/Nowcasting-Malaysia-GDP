@@ -1,4 +1,4 @@
-# Nowcasting Malaysia’s GDP with Machine Learning
+# Nowcasting Malaysia’s GDP using Machine Learning
 
 ### Introduction
 This report presents the International Data Science Accelerator Programme's output for Nowcasting Malaysia's Gross Domestic Product (GDP) using Machine Learning (ML). This mentor-mentee programme was held over 12 weeks (April 11 to July 1, 2022) between mentees, Veronica Jamilat, Khadijah Jasni, Fatin Ezzati (statisticians from the Department of Statistics Malaysia), and Will Malpass (Data Scientist, Data Science Campus UK) as a mentor.
@@ -15,7 +15,7 @@ Therefore, this project aims to identify a new and potential approach in nowcast
 The most crucial part of executing this project is acquiring relevant data series. We initially managed to compile a dataset comprising more than 100 economic-related variables at different time frames. Some variables have more extended back series, while some indicators are only available in shorter time series, making the variable selection process consume much more time than expected. The process includes cross-checking available time-series data on different platforms and harmonising those datasets.
 
 ### Dataset
-Before implementing Machine Learning Models, we have experimented with various dataset combinations. Those datasets are selected with variables that have extended back series and transformed into a stationary dataset.
+Before implementing Machine Learning Models, we have experimented with various dataset combinations. Those datasets are selected with variables that have extended back series and transformed into a stationary dataset. List of 42 selected variables:
 
 | Variable | Description | Units |
 | ------------- | ------------- | ------------- |
@@ -74,4 +74,14 @@ Processed data used in the modelling process includes 42 selected variables and 
 *Experimenting with different time-frame to see how those models perform with extreme signal(s) - side note: it is worth experimenting with those time frames because NY Fed shut down their nowcast over the pandemic!*
 
 ![image](https://user-images.githubusercontent.com/104331591/178622693-dd57d50c-43b9-46e8-a72d-7c3ba85ed5db.png)
+
+### Results
+
+We conducted a rolling window method to cater to a small observation in the dataset and assess model stability.
+
+### Conclusion
+The results of this project suggest that:
+1)	ML models outperformed benchmark model (AR) in nowcasting Malaysia’s GDP
+2)	XGBoost & Random Forest found to perform better than other ML models, both models perform better with shorter time-series (small observation) dataset and performed consistently, with and without extreme signal
+3)	LightGBM performs better with extreme signal(s)
 
