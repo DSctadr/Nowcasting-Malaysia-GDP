@@ -77,10 +77,12 @@ Processed data used in the modelling process includes 42 selected variables and 
 
 ### Results
 
-![image](https://user-images.githubusercontent.com/104331591/178622693-dd57d50c-43b9-46e8-a72d-7c3ba85ed5db.png)
 *Model performance – Full data without applying the rolling window method*
+![image](https://user-images.githubusercontent.com/104331591/178670548-64a1ad88-4150-47ad-8286-c9b90c5ae03d.png)
 
-We conducted a rolling window method to cater to a small observation in the dataset and assess model stability.
+We conducted a rolling window method to cater small observation in the dataset and assess model stability. Rolling window relatively  improves model performance.
+![image](https://user-images.githubusercontent.com/104331591/178670793-7259123c-47c7-4fa9-8044-a1d3b214930d.png)
+
 
 ### Conclusion
 The results of this project suggest that:
