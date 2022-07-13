@@ -1,22 +1,21 @@
 # Nowcasting Malaysia’s GDP with Machine Learning
 
 ### Introduction
-This report presents the International Data Science Accelerator Programme's output for Nowcasting Malaysia's Gross Domestic Product (GDP) using Machine Learning. This mentor-mentee programme was held over the 12 weeks (April 11 to July 1 2022) between mentees, Veronica Jamilat, Khadijah Jasni, Fatin Ezzati (statisticians from the Department of Statistics Malaysia) and Will Malpass (Data Scientist, Data Science Campus UK) as a mentor.
+This report presents the International Data Science Accelerator Programme's output for Nowcasting Malaysia's Gross Domestic Product (GDP) using Machine Learning (ML). This mentor-mentee programme was held over 12 weeks (April 11 to July 1, 2022) between mentees, Veronica Jamilat, Khadijah Jasni, Fatin Ezzati (statisticians from the Department of Statistics Malaysia), and Will Malpass (Data Scientist, Data Science Campus UK) as a mentor.
 
-This project aims to identify a new and potential approach to nowcasting GDP using Machine Learning models. This new approach may complement the existing method of producing GDP advanced estimates. 
+### Motivation
+Accurate and timely information is crucial in facilitating decision-making. As practised in many countries, advance estimate (AE) of GDP is generally available in the first month after each quarter. 
+Currently, Malaysia's GDP AE is compiled using the conventional method, which requires many resources, and is only used internally. Recent literatures have proven ML to outperform Autoregressive (AR) as a benchmark model in nowcasting (forecasting) GDP (and other economic indicators)
+Therefore, this project aims to identify a new and potential approach in nowcasting Malaysia's GDP using ML and to complement (or replace) the existing method in producing Malaysia's GDP advance estimates.
 
 ### Methodology Framework
 ![overall data science drawio](https://user-images.githubusercontent.com/58675575/175886895-ed878e5f-5225-4f8d-a26a-b9b5f25296f5.png)
 
 ### Data and Experimental Setup
-The most crucial part of executing this project is acquiring relevant data series. Initially, we managed to compile a dataset comprising more than 100 economic-related variables at different time-frame. Some variables have more extended back series, while some indicators are only available in shorter time series, making the variable selection process consume much more time than expected. The process includes cross-checking available time-series data on different platforms and harmonising those datasets.
+The most crucial part of executing this project is acquiring relevant data series. We initially managed to compile a dataset comprising more than 100 economic-related variables at different time frames. Some variables have more extended back series, while some indicators are only available in shorter time series, making the variable selection process consume much more time than expected. The process includes cross-checking available time-series data on different platforms and harmonising those datasets.
 
-### Experimental Procedure
-![Data Science drawio](https://user-images.githubusercontent.com/58675575/175885248-d361e44d-72b3-40f6-9f15-90f4b02e9d8b.png)
-
-
-### Data
-Before implementing Machine Learning Models, we have experimented with various combinations of a dataset. Those datasets are selected with variables that have extended back series and transformed into a stationary dataset. 
+### Dataset
+Before implementing Machine Learning Models, we have experimented with various dataset combinations. Those datasets are selected with variables that have extended back series and transformed into a stationary dataset.
 
 | Variable | Description | Units |
 | ------------- | ------------- | ------------- |
@@ -119,4 +118,15 @@ Before implementing Machine Learning Models, we have experimented with various c
 |IPIMIN|	IPI: Mining| Index |
 |IOSTOT|	Index of Services: Total| Index |
 |GDPGR|	GDP Growth Rate| RM Million |
+
+### Experiment flow
+Processed data used in the modelling process includes 42 selected variables and transformed into a stationary dataset. There are three (3) datasets involved in the experiment. Dataset split into:
+
+•	Full data (Q12005 - Q42021)
+•	During COVID19, exclude  vaccination rollout (Q12020-Q12021)
+•	During COVID19, include  vaccination rollout (Q12021-Q42021)
+
+** Experimenting with different time-frame to see how those models perform with extreme signal(s) - side note: it is worth experimenting with those time frames because NY Fed shut down their nowcast over the pandemic!
+
+![image](https://user-images.githubusercontent.com/104331591/178622693-dd57d50c-43b9-46e8-a72d-7c3ba85ed5db.png)
 
