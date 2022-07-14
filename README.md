@@ -84,7 +84,7 @@ We conducted a rolling window method to cater small observation in the dataset a
 ![image](https://user-images.githubusercontent.com/104331591/178670793-7259123c-47c7-4fa9-8044-a1d3b214930d.png)
 
 Comparison of observed and predicted outcome
-![image](https://user-images.githubusercontent.com/104331591/178694702-9610c639-8116-4c44-8d7b-da24809979be.png)
+![image](https://user-images.githubusercontent.com/104331591/178882558-f19a4f3c-a703-47af-b7f4-b667445e59bc.png)
 *Observed 1-year change in GDP and the predictions by the XG Boost, Random Forest, and the AR (left panel). Error of those methods (right panel)*
 
 All three models underestimate GDP growth during the global financial crisis and pandemic. However, the XG Boost model is least biased (compared to other models) in those periods 
