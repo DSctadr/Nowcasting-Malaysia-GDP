@@ -83,6 +83,11 @@ Processed data used in the modelling process includes 42 selected variables and 
 We conducted a rolling window method to cater small observation in the dataset and assess model stability. Rolling window relatively  improves model performance.
 ![image](https://user-images.githubusercontent.com/104331591/178670793-7259123c-47c7-4fa9-8044-a1d3b214930d.png)
 
+Comparison of observed and predicted outcome
+![image](https://user-images.githubusercontent.com/104331591/178694702-9610c639-8116-4c44-8d7b-da24809979be.png)
+*Observed 1-year change in GDP and the predictions by the XG Boost, Random Forest, and the AR (left panel). Error of those methods (right panel)*
+
+All three models underestimate GDP growth during the global financial crisis and pandemic. However, the XG Boost model is least biased (compared to other models) in those periods 
 
 ### Conclusion
 The results of this project suggest that:
