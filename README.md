@@ -119,5 +119,5 @@ The results of this project suggest that:
 ### Future Works
 ![image](https://user-images.githubusercontent.com/104331591/193512945-b1972b8a-e7e9-45ba-af49-3ec68ac425e0.png)
 
-##Full Reports: 
+##Access Full Report: 
 Click this link https://drive.google.com/file/d/1o0InpFfcqyYlBbk4YaD9t0ntvWCKxff5/view?usp=sharing
