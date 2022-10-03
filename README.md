@@ -1,18 +1,32 @@
 # Nowcasting Malaysia’s GDP using Machine Learning
 
-### Introduction
-This report presents the International Data Science Accelerator Programme's output for Nowcasting Malaysia's Gross Domestic Product (GDP) using Machine Learning (ML). This mentor-mentee programme was held over 12 weeks (April 11 to July 1, 2022) between mentees, Veronica Jamilat, Khadijah Jasni, Fatin Ezzati (statisticians from the Department of Statistics Malaysia), and Will Malpass (Data Scientist, Data Science Campus UK) as a mentor.
+This project presents the International Data Science Accelerator Programme's output for Nowcasting Malaysia's Gross Domestic Product (GDP) using Machine Learning (ML). This mentor-mentee programme was held over 12 weeks (April 11 to July 1, 2022) between mentees, Veronica Jamilat, Khadijah Jasni, Fatin Ezzati (statisticians from the Department of Statistics Malaysia), and Will Malpass (Data Scientist, Data Science Campus UK) as a mentor.
 
-### Motivation
-Accurate and timely information is crucial in facilitating decision-making. As practised in many countries, advance estimate (AE) of GDP is generally available in the first month after each quarter. 
-Currently, Malaysia's GDP AE is compiled using the conventional method, which requires many resources, and is only used internally. Recent literatures have proven ML to outperform Autoregressive (AR) as a benchmark model in nowcasting (forecasting) GDP (and other economic indicators)
-Therefore, this project aims to identify a new and potential approach in nowcasting Malaysia's GDP using ML and to complement (or replace) the existing method in producing Malaysia's GDP advance estimates.
+### Introduction
+As the COVID-19 pandemic unfolded, it became clear the need for a systematic analysis of high-frequency indicators of economic activity. The year 2020 saw the COVID-19 outbreak strike the world economy with unprecedented severity and unpredictability, providing a striking illustration of the need for timely knowledge (Barua, 2020). The concern emerged as to whether a wide range of higher frequency data from different sources could be properly analysed to deliver timely information on economic conditions that is useful for policymakers (Hopp, 2022). Therefore, the Department of Statistics Malaysia took the initiative to compile monthly advanced estimates to capture the extent of the contraction observed in the first half of 2020.  Thus, it is critical to give a current macroeconomic situation that goes beyond historical estimates and is capable of "nowcasting" current GDP in a timely and accurate manner (Proietti & Giovannelli, 2020). 
+
+### Objective and Contribution
+This project describes an effort to identify a new potential approach in nowcasting Malaysia’s GDP using ML and to complement (or replace) the existing method in producing Malaysia’s GDP advance estimates. It adds to the growing literature on nowcasting in several ways. First, it motivates and compiles datasets over 111 variables consisting of indexes, SITC-single digit code, banking, exchange rate and labour market. Second, we employ 11 machine learning (ML) algorithms to nowcast GDP growth. Third, the paper compares the performance of ML algorithms in dealing with and capturing extreme signal (s) by experimenting with different time frames (Full data: Q12005 - Q42021, COVID-19 exclude vaccination rollout: Q12020 – Q12021 and COVID-19 include vaccination rollout: Q12021 – Q42021). 
+
+### Related Works
+These are some of the countries that are working on nowcasting their countries GDP with ML. Based on table below, every country has different best models because each of the country has different economic conditions, different policy, people and culture and therefore, different data. Thus, not all models are applicable for each country.
+
+| Countries | Selected Machine Learning Models | Best Model|
+| ------------- | ------------- | ------------- |
+|United Kingdom | LASSO, MIDAS, Random Forest, SVM, Neural Net, LSTM, DFM | LASSO |
+|China  | SVM, DFM, Elastic Net, Random Forest and Gradient Boosting  | SVM |
+|USA | LSTM, Bayesian VAR, Ridge, MIDAS, MLP, Random Forest, DFM, Gradient Boosting, Decision Tree, MF-VAR, OLS | LSTM, Bayesian VAR |
+|New Zealand  | SVM, Neural Net, KNN, Boosted Trees, LASSO, Ridge, Elastic Net, DFM, BVAR, RBNZ | SVM & Neural Net |
+|Austria | Ridge, Elastic Net, Lasso, Ridge, Random Forest, SVM, Neural Net, LSTM, BiLSTM, NNcon, Gaussian Process Regression | Ridge |
+|Indonesia|	Random Forest, LASSO, Ridge, Elastic Net, Neural Networks, and Support Vector Machines|Random Forest |
 
 ### Methodology Framework
-![overall data science drawio](https://user-images.githubusercontent.com/58675575/175886895-ed878e5f-5225-4f8d-a26a-b9b5f25296f5.png)
+![overall data science-Page-1 drawio (3)](https://user-images.githubusercontent.com/104331591/193501760-5e353deb-018c-4d9e-a6d1-fae61912f8c1.png)
 
 ### Data and Experimental Setup
 The most crucial part of executing this project is acquiring relevant data series. We initially managed to compile a dataset comprising more than 100 economic-related variables at different time frames. Some variables have more extended back series, while some indicators are only available in shorter time series, making the variable selection process consume much more time than expected. The process includes cross-checking available time-series data on different platforms and harmonising those datasets.
+
+Currently, Malaysia's GDP advance estimate (AE) is compiled using the conventional method which requires many resources with more than 200 variables used. However, the data used are published with different frequencies whereas in this paper, we omitted variables that are quarterly data. The data consists of the time series of GDP and its 111 components taken from the production and expenditure quarterly and monthly economic indicators. This dataset consists of 106 monthly variables and 5 quarterly variables from the period 2005, January until 2021, December. This dataset involves three (3) sets of data sources: The Department of Statistics Malaysia (DOSM), the Central Bank of Malaysia (BNM) and the website (www.investing.com). 
 
 ### Dataset
 Before implementing Machine Learning Models, we have experimented with various dataset combinations. Those datasets are selected with variables that have extended back series and transformed into a stationary dataset. List of 42 selected variables:
@@ -60,6 +74,9 @@ Before implementing Machine Learning Models, we have experimented with various d
 |SERVTAX| Service Tax| YoY (%) |
 |SOPC| Sales of Passenger Cars| YoY (%) |
 |TOURIST| Tourist Arrivals| YoY (%) |
+|ACTIVEJOBS| Active Jobseekers| YoY (%) |
+|JOBVACAN| Job Vacancy| YoY (%) |
+|RETRENCH| Retrenchment| YoY (%) |
 |USDEXC| USD Exchange rate| YoY (%) |
 
 ### Experiment flow
@@ -76,9 +93,12 @@ Processed data used in the modelling process includes 42 selected variables and 
 ![image](https://user-images.githubusercontent.com/104331591/178622693-dd57d50c-43b9-46e8-a72d-7c3ba85ed5db.png)
 
 ### Results
+Model performance – Comparison With and Without Rolling Window Method
+This project use few dimensions to assess which ML models perform the best to nowcast Malaysia's GDP. We look at error models using RMSE and MAE and for stability and consistency using rolling window method and trendline to assess how close the actual GDP trendline with ML models'. 
 
-*Model performance – Full data without applying the rolling window method*
-![image](https://user-images.githubusercontent.com/104331591/178670548-64a1ad88-4150-47ad-8286-c9b90c5ae03d.png)
+![model performance (2)](https://user-images.githubusercontent.com/104331591/193489414-c42c19c6-5f77-4264-8e8c-ee429458ddd3.png)
+As observed 
+
 
 We conducted a rolling window method to cater small observation in the dataset and assess model stability. Rolling window relatively  improves model performance.
 ![image](https://user-images.githubusercontent.com/104331591/178670793-7259123c-47c7-4fa9-8044-a1d3b214930d.png)
