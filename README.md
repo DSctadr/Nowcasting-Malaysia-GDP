@@ -115,3 +115,9 @@ The results of this project suggest that:
 1)	ML models outperformed benchmark model (AR) in nowcasting Malaysia’s GDP
 2)	XGBoost & Random Forest found to perform better than other ML models with shorter time series dataset and these two model capture extreme values or uncertainties in Malaysia GDP.
 3)	The use of machine learning algorithms is indispensable for giving innovative solutions to complement the existing method in producing Malaysia’s GDP advance estimates.
+
+### Future Works
+![image](https://user-images.githubusercontent.com/104331591/193512945-b1972b8a-e7e9-45ba-af49-3ec68ac425e0.png)
+
+##Full Reports: 
+Click this link https://drive.google.com/file/d/1o0InpFfcqyYlBbk4YaD9t0ntvWCKxff5/view?usp=sharing
