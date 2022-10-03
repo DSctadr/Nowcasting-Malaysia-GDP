@@ -97,21 +97,21 @@ Model performance – Comparison With and Without Rolling Window Method
 This project use few dimensions to assess which ML models perform the best to nowcast Malaysia's GDP. We look at error models using RMSE and MAE and for stability and consistency using rolling window method and trendline to assess how close the actual GDP trendline with ML models'. 
 
 ![model performance (2)](https://user-images.githubusercontent.com/104331591/193489414-c42c19c6-5f77-4264-8e8c-ee429458ddd3.png)
-As observed 
 
+As observed from figure above, before applying rolling window, LightGBM and LSTM gave the lowest error model. However, it is not realistic to assume model parameters are always constant as in reality economic conditions changing significantly over time. Therefore, when we apply the rolling method, the error models for the LightGBM and LSTM increased which means the models are not stable and consistent over time. The best models when considering all the dimensions, Random Forest and XG Boost gave the lowest error, stable and consistent over time and they manage to capture the extreme values. 
 
-We conducted a rolling window method to cater small observation in the dataset and assess model stability. Rolling window relatively  improves model performance.
-![image](https://user-images.githubusercontent.com/104331591/178670793-7259123c-47c7-4fa9-8044-a1d3b214930d.png)
+![image](https://user-images.githubusercontent.com/104331591/193503436-e7cefd8c-5eed-4084-8bc3-9a946c235016.png)
 
-Comparison of observed and predicted outcome
-![image](https://user-images.githubusercontent.com/104331591/178882558-f19a4f3c-a703-47af-b7f4-b667445e59bc.png)
 *Observed 1-year change in GDP and the predictions by the XG Boost, Random Forest, and the AR (left panel). Error of those methods (right panel)*
 
-All three models underestimate GDP growth during the global financial crisis and pandemic. However, the XG Boost model is least biased (compared to other models) in those periods 
+All three models underestimate GDP growth during the global financial crisis and pandemic. However, the XG Boost model is least biased (compared to other models) in those periods
+
+![image](https://user-images.githubusercontent.com/104331591/193511662-fe98f816-216a-407c-b64e-7d05cf2654cd.png)
+
+The above chart is the actual GDP growth against the two best models: Random Forest and XG Boost. These models manage to capture the uncertainties or sudden drop during the Covid-19 pandemic. Thus, considering the models' error, stability and consistency, we believe Random Forest and XG Boost are able to nowcast Malaysia's GDP.
 
 ### Conclusion
 The results of this project suggest that:
 1)	ML models outperformed benchmark model (AR) in nowcasting Malaysia’s GDP
-2)	XGBoost & Random Forest found to perform better than other ML models, both models perform better with shorter time-series (small observation) dataset and performed consistently, with and without extreme signal
-3)	LightGBM performs better with extreme signal(s)
-
+2)	XGBoost & Random Forest found to perform better than other ML models with shorter time series dataset and these two model capture extreme values or uncertainties in Malaysia GDP.
+3)	The use of machine learning algorithms is indispensable for giving innovative solutions to complement the existing method in producing Malaysia’s GDP advance estimates.
